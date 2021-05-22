@@ -1,0 +1,16 @@
+{
+    "users":
+    [{
+        "username":"s.thanak",
+        "department":"Interns",
+        "display_name": "Steve Thanak",
+        "password":"evil.kitty.9"
+    },
+    {
+        "username":"j.johnson",
+        "department":"IT",
+        "display_name":"John Johnson",
+        "password":"eazy.vars.11"
+    }
+]
+}

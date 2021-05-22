@@ -1,0 +1,4 @@
+---
+# vars file for domain
+scripts_path: "C:\\ansible_scripts"
+

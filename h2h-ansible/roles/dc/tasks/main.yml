@@ -1,0 +1,13 @@
+---
+   -  name: Welcome task 
+      ansible.builtin.debug:
+         msg: Hello! Lets configure {{ inventory_hostname }} and domain
+   -  name: copy scripts on remote 
+      win_copy:
+         src: "{{ item }}"
+         dest: "{{ scripts_path }}"
+      with_fileglob:
+         - "templates/*"
+   -  name: Create OUs
+      #ansible.windows.win_shell: "{{ lookup('ansible.builtin.template', 'CreateOU.ps1') }}" - from template file
+      ansible.windows.win_shell: "{{ scripts_path }}\\CreateOU.ps1" #from hostname`s disks
