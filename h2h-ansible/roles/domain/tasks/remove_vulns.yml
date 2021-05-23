@@ -1,0 +1,4 @@
+---
+  - name: Welcome task
+    ansible.builtin.debug:
+      msg: "Removing vulnerabilities..."

@@ -1,0 +1,14 @@
+---
+  - name: Welcome task
+    ansible.builtin.debug:
+      msg: "Configuring the domain..."
+  - name: copy files on remote 
+    win_copy:
+      src: "{{ item }}"
+      dest: "{{ scripts_path }}"
+    with_fileglob:
+      - "users.json"
+  - name: Create OUs
+    ansible.windows.win_shell: "{{ lookup('ansible.builtin.file', 'CreateOU.ps1') }}" #from files 
+  - name: Create Users
+    ansible.windows.win_shell: "{{ lookup('ansible.builtin.file', 'CreateUsers.ps1') }}" #from files

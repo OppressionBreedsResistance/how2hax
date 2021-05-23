@@ -1,17 +1,16 @@
 ---
    -  name: Welcome task 
       ansible.builtin.debug:
-         msg: Hello! Let`s configure domain
-   -  name: copy files on remote 
-      win_copy:
-         src: "{{ item }}"
-         dest: "{{ scripts_path }}"
-      with_fileglob:
-         - "CreateOU.ps1"
-         - "CreateUsers.ps1"
-         - "users.json"
-   -  name: Create OUs
-      #ansible.windows.win_shell: "{{ lookup('ansible.builtin.files', 'CreateOU.ps1') }}" - from template file
-      ansible.windows.win_shell: "{{ scripts_path }}\\CreateOU.ps1" #from hostname`s disks
-   #-  name: Create Users
-   #   ansible.windows.win_shell: "{{ lookup('ansible.builtin.template', 'CreateUsers.ps1') }}"
+         msg: Hello! Let`s prepare the domain...
+
+   -  name: Configure the domain #Just domain configuration
+      include_tasks: configure.yml
+      when: configure_domain == "Yes"
+
+   -  name: Add vulns   #Adding vulnerabilities according to documentation
+      include_tasks: add_vulns.yml
+      when: add_vulns == "Yes"
+
+   -  name: Remove vulns   #Removing vulnerabilities according to documentation
+      include_tasks: remove_vulns.yml
+      when: remove_vulns == "Yes"
