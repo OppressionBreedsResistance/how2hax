@@ -19,6 +19,10 @@ The main purpose of this project is to provide flexible and fast way to build de
     - domain_admin_username: [your domain admin username]
     - domain_admin_password: [your domain admin password]
 # Usage
+
+## Roles
+Each role has three main playbooks (and one to rule them all). Main.yml started config.yml, add_vulns.yml or remove_vulns.yml, depending of your choice. Vulnerabilities are described in README file for each role. 
+
 ## Examples
 - For domain configuration  
 `poetry run ansible-playbook start.yml -e=@creds.yml --ask-vault-pass -e="configure=Yes" -e"add_vulns=No" -e"remove_vulns=No" -l primary_domain_controller`
