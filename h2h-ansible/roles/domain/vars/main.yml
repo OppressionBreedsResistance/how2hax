@@ -3,6 +3,6 @@
 scripts_path: "C:\\ansible_scripts"
 
 #Default mode = configuration
-configure_domain: "Yes"
+configure: "Yes"
 add_vulns: "No"
 remove_vulns: "No"

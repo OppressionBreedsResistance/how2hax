@@ -5,7 +5,7 @@
 
    -  name: Configure the domain #Just domain configuration
       include_tasks: configure.yml
-      when: configure_domain == "Yes"
+      when: configure == "Yes"
 
    -  name: Add vulns   #Adding vulnerabilities according to documentation
       include_tasks: add_vulns.yml
