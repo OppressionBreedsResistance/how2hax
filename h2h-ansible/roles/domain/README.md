@@ -34,7 +34,8 @@ Ok, the first one is not a vulnerability as such. Actually, most of vulnerabilit
 ## VULN No. 1 
 ## DC SYNC RIGHT FOR ACESSIBLE USER
 
-DCSync is an attack that leverages "Replicating Directory Changes" rights. Such right allows user to retrieve sensitive data (passwords) via domain replication process. 
+DCSync is an attack that leverages "Replicating Directory Changes" rights. Such right allows user to retrieve sensitive data (passwords) via domain replication process.  
+User John Johnson has DCSync priviliges in how2hax.pl domain, despite not being a Domain Admin.
 
 ## VULN No. 2
 To do
