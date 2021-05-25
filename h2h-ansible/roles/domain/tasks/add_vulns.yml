@@ -2,5 +2,5 @@
   - name: Welcome task
     ansible.builtin.debug:
       msg: "Adding vulnerabilities..."
-  - name: Add vulns
-    ansible.windows.win.shell:  "{{ lookup('ansible.builtin.file', 'AddVulns.ps1) }}" #from files
+  - name: Add vulnerabilities
+    ansible.windows.win_shell: "{{ lookup('ansible.builtin.file', 'AddVulns.ps1') }}" #from files

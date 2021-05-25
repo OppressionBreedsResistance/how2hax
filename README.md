@@ -22,13 +22,25 @@ The main purpose of this project is to provide flexible and fast way to build de
 # Usage
 
 ## Roles
-Each role has three main playbooks (and one to rule them all). Main.yml started config.yml, add_vulns.yml or remove_vulns.yml, depending of your choice. Vulnerabilities are described in README file for each role. 
+Each role has three main playbooks (and one to rule them all). Main.yml started config.yml, add_vulns.yml or remove_vulns.yml, depending of your choice.  
+
+## Configuration
+### Configuration is described in README file for each role.
+Configuration is done by configure.yml playbook. In most cases tasks call scripts in files. 
+
+## Vulns
+### Vulnerabilities are described in README file for each role.
+Vulns are added/removed by ansible tasks in add_vulns.yml/remove_vulns.yml playbook. In most cases tasks call AddVulns.ps1/RemoveVulns.ps1 scripts. 
+
+I prefer ansible tasks rather than scripts, but sometimes it is easier to use Powershell.
 
 ## Examples
 - For domain configuration  
 `poetry run ansible-playbook start.yml -e=@creds.yml --ask-vault-pass -e="configure=Yes" -e"add_vulns=No" -e"remove_vulns=No" -l primary_domain_controller`
 - For domain controllers configuration and adding vulnerabilities  
 `poetry run ansible-playbook start.yml -e=@creds.yml --ask-vault-pass -e="configure=Yes" -e"add_vulns=Yes" -e"remove_vulns=No" -l domain_controllers`
+- For removing domain vulnerabilities  
+`poetry run ansible-playbook start.yml -e=@creds.yml --ask-vault-pass -e="configure=No" -e"add_vulns=No" -e"remove_vulns=Yes" -l primary_domain_controller`
 
 
 

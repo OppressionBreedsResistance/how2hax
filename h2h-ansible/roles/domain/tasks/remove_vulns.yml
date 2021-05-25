@@ -2,5 +2,5 @@
   - name: Welcome task
     ansible.builtin.debug:
       msg: "Removing vulnerabilities..."
-  - name: Remove vulns
-    ansible.windows.win.shell:  "{{ lookup('ansible.builtin.file', 'RemoveVulns.ps1) }}" #from files
+  - name: Remove vulnerabilities
+    ansible.windows.win_shell: "{{ lookup('ansible.builtin.file', 'RemoveVulns.ps1') }}" #from files
