@@ -7,6 +7,7 @@ The main purpose of this project is to provide flexible and fast way to build de
 ## **Prerequisites**
 - Freshly installed domain, with at least one PDC promoted. 
 - Freshly installed other servers/workstations if applicable (To do: add installation option), domain-joined.
+- All hosts need to be prepared for ansible usage. Check [Windows setup](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html) to see how.
 - Poetry  
 `sudo apt install poetry`  
 

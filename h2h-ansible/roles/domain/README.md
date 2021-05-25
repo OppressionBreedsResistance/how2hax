@@ -1,38 +1,29 @@
-Role Name
+Domain
 =========
 
-A brief description of the role goes here.
+Domain Role is responsible for domain configuration and domain-related vulnerabilities management. As almost everything in Windows Domain can be done from the PDC (and Domain Admin) point of view, this role is the most essential among the other. At a push you probably could do everything from here. 
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+- registered PDC
+- Domain Admin account
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+- ### scripts_path
+Path on PDC to copy files there. 
 
-Dependencies
-------------
+- ### configure
+- ### add_vulns
+- ### remove_vulns
+Kind of self-explanatory. If you want to configure domain - set "configure" to yes. Other respectively. 
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+# Vulnerabilities
+Ok, the first one is not a vulnerability as such. Actually, most of vulnerabilities here will be just "misconfigurations" or just examples of some excessive permissions, which could go well in properly secured environment. As a reminder - all "vulns" described below will be discussed on [my blog](https://how2hax.pl). 
 
-Example Playbook
-----------------
+# VULN No. 1 
+## DC SYNC RIGHT FOR ACESSIBLE USER
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
-
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Description will be here (TO DO)

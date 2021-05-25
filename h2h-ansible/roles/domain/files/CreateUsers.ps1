@@ -10,11 +10,11 @@ $password = $domain_user.password
 $department = $domain_user.department
 
 #check if user exists - create new one if not
-if ((Get-ADUser -Filter "SamAccountName -eq '$samAccountName'") -eq $null)
+if ($null -eq (Get-ADUser -Filter "SamAccountName -eq '$samAccountName'"))
 {
 
     #check if OU exists - create new one if not
-    if ((Get-ADOrganizationalUnit -Filter "Name -eq '$department'") -eq $null)
+    if ($null -eq (Get-ADOrganizationalUnit -Filter "Name -eq '$department'"))
         {
             New-ADOrganizationalUnit -Name $department -Path $DomainDN -ProtectedFromAccidentalDeletion $false
         }
