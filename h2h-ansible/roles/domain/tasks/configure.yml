@@ -10,5 +10,7 @@
       - "users.json"
   - name: Create OUs
     ansible.windows.win_shell: "{{ lookup('ansible.builtin.file', 'CreateOU.ps1') }}" #from files 
-  - name: Create Users
-    ansible.windows.win_shell: "{{ lookup('ansible.builtin.file', 'CreateUsers.ps1') }}" #from files
+  - name: Create Users and Groups
+    ansible.windows.win_shell: "{{ lookup('ansible.builtin.file', 'CreateUsersGroups.ps1') }}" #from files
+  - name: Configure permissions
+    ansible.windows.win_shell: "{{ lookup('ansible.builtin.file', 'ConfigurePermissions.ps1') }}" #from files

@@ -7,10 +7,34 @@
         "password":"evil.kitty.9"
     },
     {
+        "username":"w.carter",
+        "department":"Interns",
+        "display_name":"William Carter",
+        "password":"biggy.willy.4"
+    },
+    {
         "username":"j.johnson",
         "department":"IT",
         "display_name":"John Johnson",
         "password":"eazy.vars.11"
+    },
+    {
+        "username":"c.smith",
+        "department":"Admins",
+        "display_name":"Chris Smith",
+        "password":"dragons.den.15"
+    },
+    {
+        "username":"m.miller",
+        "department":"IT",
+        "display_name":"Mary Miller",
+        "password":"eazy.vars.11"
+    },
+    {
+        "username":"e.moore",
+        "department":"Sales",
+        "display_name":"Emma Moore",
+        "password":"crazy.car.1"
     }
 ]
 }

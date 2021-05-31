@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'SilentlyContinue'
-$OU = "IT", "Interns", "Administrators"
+$OU = "IT", "Interns", "Admins", "Groups"
 $DomainDN =Get-ADDomain | Select-Object -ExpandProperty DistinguishedName
 
 

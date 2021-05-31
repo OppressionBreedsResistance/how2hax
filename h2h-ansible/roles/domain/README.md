@@ -34,11 +34,13 @@ Ok, the first one is not a vulnerability as such. Actually, most of vulnerabilit
 ## VULN No. 1 
 ## DC SYNC RIGHT FOR ACESSIBLE USER
 
-DCSync is an attack that leverages "Replicating Directory Changes" rights. Such right allows user to retrieve sensitive data (passwords) via domain replication process.  
+DCSync is an attack that leverages "Replicating Directory Changes" rights. Such rights allow user to retrieve sensitive data (passwords) via domain replication process.  
 User John Johnson has DCSync priviliges in how2hax.pl domain, despite not being a Domain Admin.
 
 ## VULN No. 2
-To do
+## DNS ADMIN ROLE RIGHT FOR NON-ADMIN USER
+Members of "dnsadmins" group are allowed to specify the DLL (named ServerlevelPluginDll) which is loaded by DNS service on startup. As DNS service is running with Local System privileges, "dnsadmins" group member is effectively able to execute commands as System (on DNS Server). DLL can be loaded locally as well as using UNC path.  
+User Mary Miller is member of "dnsadmins" group.
 
 ## VULN No. 3
 To do
