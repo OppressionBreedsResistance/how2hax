@@ -4,7 +4,7 @@ Import-Module ActiveDirectory
 
 # ---------------------------- ADDING VULN 1 -------------------------------------
 # ---------------------------- VULN 1 --------------------------------------------
-# --------------------------- DC SYNC RIGHT FOR ACESSIBLE USER -------------------
+# --------------------------- DC SYNC RIGHT FOR ACCESSIBLE USER -------------------
 
 
 $rootObjPath = "AD:\DC=how2hax,DC=pl"

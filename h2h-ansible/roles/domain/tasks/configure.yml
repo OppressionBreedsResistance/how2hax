@@ -5,7 +5,7 @@
   - name: copy files on remote 
     win_copy:
       src: "{{ item }}"
-      dest: "{{ scripts_path }}"
+      dest: "{{ scripts_path }}/"
     with_fileglob:
       - "users.json"
   - name: Create OUs
